@@ -42,32 +42,32 @@ class PasswordComponent extends Component {
         $contador = 0;
 
         if ($password !== $confirmPassword) {
-            $error[] = 'Las contraseñas no coinciden';
+            $error[] = 'The password does not match. Please try again';
             return false;
         }
 
         if (strlen($password) < 8) {
-            $error[] = 'La contraseña es muy corta, debe tener al menos 8 caracteres';
+            $error[] = 'The password is very short, password must be at least 8 characters';
             $contador++;
         }
 
         if (!preg_match("#[0-9]+#", $password)) {
-            $error[] = 'La contraseña debe incluir al menos un numero';
+            $error[] = 'Password must contain at least one number';
             $contador++;
         }
 
         if (!preg_match("#[a-z]+#", $password)) {
-            $error[] = 'La contraseña debe incluir al menos una letra';
+            $error[] = 'Password must contain at least one letter';
             $contador++;
         }
 
         if (!preg_match("#[A-Z]+#", $password)) {
-            $error[] = 'La contraseña debe incluir al menos una letra mayúscula';
+            $error[] = 'Password must contain at least one uppercase letter';
             $contador++;
         }
 
         if (!preg_match("#\W+#", $password)) {
-            $error[] = 'La contraseña debe incluir al menos un símbolo';
+            $error[] = 'Password must contain at least one special character';
             $contador++;
         }
 
