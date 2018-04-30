@@ -2,7 +2,7 @@
 
 App::uses('Component', 'Controller');
 
-class PasswordComponent extends Component {
+class ForgotPasswordComponent extends Component {
 
     private $numberSeconds = 86400;
     public $errorMessages = '';
